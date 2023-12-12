@@ -1,0 +1,22 @@
+diff --git a/fc-service-core/src/main/resources/liquibase/validators.xml b/fc-service-core/src/main/resources/liquibase/validators.xml
+index d16aa6bd..d1418833 100755
+--- a/fc-service-core/src/main/resources/liquibase/validators.xml
++++ b/fc-service-core/src/main/resources/liquibase/validators.xml
+@@ -25,14 +25,9 @@
+     </changeSet>
+     <changeSet author="fhg" id="2022-10-24-mockkey" context="test" >
+         <insert tableName="validatorcache">
+-            <column name="diduri" value="did:web:example" />
+-            <column name="publickey" value="{&quot;kty&quot;:&quot;RSA&quot;,&quot;e&quot;:&quot;AQAB&quot;,&quot;alg&quot;:&quot;PS256&quot;,&quot;n&quot;:&quot;0nYZU6EuuzHKBCzkcBZqsMkVZXngYO7VujfLU_4ys7onF4HxTJPP3OGKEjbjbMgmpa7vKaWRomt_XXTjemA3r3f5t8bj0IoqFfvbTIq65GUIIh4y2mVbomdcQLRK2Auf79vDiqiONknTSstoPjAiCg6t6z_KruGFZbDOhYkZwqrjGnmB_LfFSlpeLwkQQ-5dVLhhXkImmWhnACoAo8ECny24Ap7wLbN9i9o1fNSz2uszACj0zxFhl3NGunHFUm3YkGd0URvoToXpK9a4zfihSUxHjeT0_7a9puVF4E3w1AAjSh4nV3pLE0cJyDITVb2M4d3m9tjjz_3XwjYiAAJ1MKVBSKDM27pexRFCJj_Dvb-dr-AImhqBhPDHn_gjdaRZIVoADC4zwBULkpvUaUIKmNFyYOjDYWWTBzTf4Gs9QL5adlVfVyK14MZPBOyq-cqIIymgp6A5_R3hKnCCBP8C_S0-VDidhI6Pr5VJPx9DydI0eB2DiOyOZvbfg7sKVkJXFUEJRiBTMhujyjYqeTtCHjCFHctZVQ8hU279eyk7mpmpDrktfCFJFi-00ZzQWTgtzBoGhke5hj0hjtG1n4jN6BfypdT5oB-DeXl2P1hp_hNC9I5gveWUYHAqN4VKve_52A3ub8vBlISQhEUeZoFUterTiDA3NyK7wsj_V7-KM6U&quot;}" />
+-            <column name="expirationtime" valueDate="2099-01-01T12:00:00" />
+-        </insert>
+-        <insert tableName="validatorcache">
+-            <column name="diduri" value="did:web:compliance.lab.gaia-x.eu" />
+-            <column name="publickey" value="{&quot;kty&quot;:&quot;RSA&quot;,&quot;e&quot;:&quot;AQAB&quot;,&quot;alg&quot;:&quot;PS256&quot;,&quot;n&quot;:&quot;0nYZU6EuuzHKBCzkcBZqsMkVZXngYO7VujfLU_4ys7onF4HxTJPP3OGKEjbjbMgmpa7vKaWRomt_XXTjemA3r3f5t8bj0IoqFfvbTIq65GUIIh4y2mVbomdcQLRK2Auf79vDiqiONknTSstoPjAiCg6t6z_KruGFZbDOhYkZwqrjGnmB_LfFSlpeLwkQQ-5dVLhhXkImmWhnACoAo8ECny24Ap7wLbN9i9o1fNSz2uszACj0zxFhl3NGunHFUm3YkGd0URvoToXpK9a4zfihSUxHjeT0_7a9puVF4E3w1AAjSh4nV3pLE0cJyDITVb2M4d3m9tjjz_3XwjYiAAJ1MKVBSKDM27pexRFCJj_Dvb-dr-AImhqBhPDHn_gjdaRZIVoADC4zwBULkpvUaUIKmNFyYOjDYWWTBzTf4Gs9QL5adlVfVyK14MZPBOyq-cqIIymgp6A5_R3hKnCCBP8C_S0-VDidhI6Pr5VJPx9DydI0eB2DiOyOZvbfg7sKVkJXFUEJRiBTMhujyjYqeTtCHjCFHctZVQ8hU279eyk7mpmpDrktfCFJFi-00ZzQWTgtzBoGhke5hj0hjtG1n4jN6BfypdT5oB-DeXl2P1hp_hNC9I5gveWUYHAqN4VKve_52A3ub8vBlISQhEUeZoFUterTiDA3NyK7wsj_V7-KM6U&quot;}" />
+-            <column name="expirationtime" valueDate="2099-01-01T12:00:00" />
++            <column name="diduri" value="did:web:merlot-education.eu" />
++            <column name="publickey" value="{&quot;kty&quot;:&quot;RSA&quot;,&quot;e&quot;:&quot;AQAB&quot;,&quot;alg&quot;:&quot;PS256&quot;,&quot;n&quot;:&quot;zZG2EC1Wu5XLAtXK7LUKW6xq96ixUPO2L35i7-63W6QiOhaJUjyFEuhZfyueB2vWL4viVJcP4xkPjt0A4T50Y13-CiYy4D6jeQnUhMUAlaTbhflBViBwdS5Ng_ed9Nry1LaIBSoJHn4KwERpKyMYcOCCwzeQJFGOUn9TB19Ezzm4xmn79HTjDdluPatlyzIb3H8HMdqXCS9FfS43ubjAu97XAY-GsxUVQZwLN1BMfgvFVc7ZYbBxdiTRQgTqCykfpff93hquL_npNWsXVVVfzuHnpSar-9NSMcHJpkLryCnJla31JLy8w1no1PbGjls-1XsNXA9ZvcgDDtRrvpHR9zg_6U6xF-Wog56YUgW6KcCGcvHGxsA6-zy9tZD01kdrhgtGOID1MCOtPwcLCrs56-ZhiabV-A4A23uOyNYW-s0LpNPW4rNUmfXfjzF6GB0Uq86__9lHHRocJ7X8HDqkhhUaMHJ3om3i7U-sFznE2RFovI3_UJZ1cUFJmIwM9TE7kpm6k6t9ZNnzgP6A-eLeH2QMxxZBIXdQ8fIezzsy4m0RFxZRilQuNKO9rzFVJvmkRv4qn1KMoyAE0DB6656MYRVc2kSNRmPAuTzd7T7t9gimu9DdqeercGizdvzOuUlzAmCN0XvazzgC75ZyuPN8Hm4mL_N79UgayybvA04_Ch8&quot;}" />
++            <column name="expirationtime" valueDate="2123-11-18T14:50:11" />
+         </insert>
+     </changeSet>
+ </databaseChangeLog>
